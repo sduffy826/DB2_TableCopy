@@ -166,7 +166,7 @@ def loadIt(schema, tablename, identityColName, typeOfLoad, maxIdentityValue, fil
     theString = 'import from '+tablename+'.ixf of ixf ' 
   
   theString = theString + 'messages ' + tablename + '_load.msg ' +\
-                          '"create into '+outputTable+'"'
+                          'replace_create into '+outputTable
 
   if isRemote: # We don't load remote tables write name of files and command to output files
     print 'Writing list/command to files'
