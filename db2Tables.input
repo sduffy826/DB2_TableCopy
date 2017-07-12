@@ -1,0 +1,13 @@
+# File format is:
+# schema, tablename, identify column name, type of table load (import or load)
+#
+# load is needed if it's has an identity column, and the table must exist
+# if doing a load
+#
+# Don't change the names of the elements in the layout record, they're referenced
+# in code (you can change the order)
+#
+##Layout, schema, tableName, identityColumn, typeOfLoad
+survey, key_map_comments, comment_key, load
+survey, alchemy_base,                , import
+survey, alchemy_keywords,            , load

@@ -1,0 +1,7 @@
+# Format is the key for lookup, the database, the userid, password and boolean if it's remote
+# Note: the Layout record identifies the attribute order, DO NOT change the names of these (you can record) but DONT change
+# names, they're referenced in code
+#
+##Layout, alias, database, userid, password, isRemote
+prod,     DBP1,   userid, password, True
+dev,      DBD1,   devId,  devPw,    False
