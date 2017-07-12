@@ -32,6 +32,7 @@
 #   db2 -tsvf db2LoadCommands.sql (Performs the loads and resets identity columns)
 # Done, check it out
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 import os
 import sys
 import subprocess

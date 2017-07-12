@@ -13,7 +13,6 @@ def getFileLayout(fileName):
         recordsRead += 1
         if (aLine.startswith('##Layout')):
           myList = map(str.strip,aLine.split(","))  # Split record to list and strip each element
-          print 'LayoutRecord: ',myList
           indexPos = 0
           for theColName in myList:
             if (indexPos > 0):
@@ -28,7 +27,6 @@ def getFileLayout(fileName):
   if (len(rtnMap) == 0):
     print 'No layout found in ' + fileName
     exit()
-  print 'Layout:',rtnMap
   return rtnMap
 
 # Return the file passed in as a dictionary, the second argument to this routine identifies the key for the
@@ -58,7 +56,6 @@ def getFileMap(fileName, keyFields):
           theKey = theKey.strip('.')                # Strip off the . in front
           if (theKey in rtnMap):                   # If already saw key put out warning
             print 'Warning: ' + theKey + ' is duplicated in file, second value used'
-          print 'theKey:',theKey,' tuple:',tuple(myList)
           rtnMap[theKey] = tuple(myList)           # Create dictionary item
   except:
     if (recordsRead == 0):
